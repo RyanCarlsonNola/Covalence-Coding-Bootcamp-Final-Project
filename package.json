@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/jamescpurcell/CODEocalypse/issues"
   },
-  "homepage": "https://github.com/jamescpurcell/CODEocalypse#readme"
+  "homepage": "https://github.com/jamescpurcell/CODEocalypse#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
