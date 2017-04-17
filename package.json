@@ -1,0 +1,22 @@
+{
+  "name": "codeocalypse",
+  "version": "1.0.0",
+  "description": "The four horseman's resume site",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamescpurcell/CODEocalypse.git"
+  },
+  "keywords": [
+    "codeocalypse"
+  ],
+  "author": "Gold Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamescpurcell/CODEocalypse/issues"
+  },
+  "homepage": "https://github.com/jamescpurcell/CODEocalypse#readme"
+}
