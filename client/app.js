@@ -14,4 +14,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         templateUrl: 'James/james.html',
         controller: 'JamesWelController'
     })
+    $routeProvider.when('/patrick', {
+        templateUrl: 'Patrick/patrick.html',
+        controller: 'PatrickWelController'
+    })
 }])
