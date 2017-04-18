@@ -5,11 +5,13 @@ angular.module('CODEocalypse.controllers', [])
     }])
     
     .controller('JamesWelController', ['$scope', '$location', function($scope, $location) {
-        $(window).stellar();
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
     }])
 
     .controller('JimWelController', ['$scope', '$location', function($scope, $location) {
-        $(window).stellar();
+
     }])
 
     .controller('RyanWelController', ['$scope', '$location', function($scope, $location) {
