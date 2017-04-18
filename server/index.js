@@ -14,7 +14,7 @@ app.get("*", function(req, res, next) {
     if(routeMw.isAsset(req.url)) {
         next();
     } else {
-        res.sendFile(path.join(__dirnam, "../client/index.html"));
+        res.sendFile(path.join(__dirname, "../client/index.html"));
     }
 })
 
