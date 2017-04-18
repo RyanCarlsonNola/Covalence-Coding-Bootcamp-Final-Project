@@ -1,11 +1,10 @@
-
+/*Main Welcome*/
 html,body {
   padding:0;
   margin:0;
   height:100%;
   min-height:100%;
  }
-
 .quarter{
   border: 1px solid red;
   width:50%;
@@ -16,3 +15,19 @@ html,body {
   height:50%;
   width:100%;
 }
+
+/*James*/
+ja_testdiv {
+    width: 300px;
+    background-color: teal;
+}
+/*End James*/
+
+/*Ryan*/
+/*End Ryan*/
+
+/*Patrick*/
+/*End Patrick*/
+
+/*Jim*/
+/*End Jim*/

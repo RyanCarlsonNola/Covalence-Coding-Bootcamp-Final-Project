@@ -5,7 +5,7 @@ angular.module('CODEocalypse.controllers', [])
     }])
     
     .controller('JamesWelController', ['$scope', '$location', function($scope, $location) {
-        $(window).stellar();
+
     }])
 
     .controller('JimWelController', ['$scope', '$location', function($scope, $location) {
