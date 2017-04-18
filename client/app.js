@@ -3,7 +3,7 @@ var app = angular.module('CODEocalypse', ['CODEocalypse.factories','CODEocalypse
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 
     $routeProvider.when('/', {
-        templateUrl: './welcome.html',
+        templateUrl: 'welcome.html',
         controller: 'WelcomeController'
     })
 }])
