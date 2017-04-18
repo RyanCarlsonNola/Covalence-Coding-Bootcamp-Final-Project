@@ -6,4 +6,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         templateUrl: 'welcome.html',
         controller: 'WelcomeController'
     })
+    $routeProvider.when('/jim', {
+        templateUrl: 'Jim/jim.html',
+        controller: 'JimWelController'
+    })
 }])
