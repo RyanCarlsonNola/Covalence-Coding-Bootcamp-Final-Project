@@ -4,23 +4,23 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     $locationProvider.html5Mode(true);
     
     $routeProvider.when('/', {
-        templateUrl: 'welcome.html',
+        templateUrl: 'views/welcome.html',
         controller: 'WelcomeController'
     })
     $routeProvider.when('/jim', {
-        templateUrl: 'Jim/jim.html',
+        templateUrl: 'views/Jim/jim.html',
         controller: 'JimWelController'
     })
     $routeProvider.when('/james', {
-        templateUrl: 'James/james.html',
+        templateUrl: 'views/James/james.html',
         controller: 'JamesWelController'
     })
     $routeProvider.when('/patrick', {
-        templateUrl: 'Patrick/patrick.html',
+        templateUrl: 'views/Patrick/patrick.html',
         controller: 'PatrickWelController'
     })
     $routeProvider.when('/ryan', {
-        templateUrl: 'Ryan/ryan.html',
+        templateUrl: 'views/Ryan/ryan.html',
         controller: 'RyanWelController'
     })
 }])
