@@ -5,8 +5,11 @@ html,body {
   height:100%;
   min-height:100%;
  }
+ div{
+   /*border: 1px solid white;*/
+ }
 .quarter{
-  border: 1px solid red;
+  border: 1px solid white;
   width:50%;
   height:100%;
   float:left;
@@ -15,6 +18,12 @@ html,body {
 .contents{
   height:50%;
   width:100%;
+}
+
+#passwordBox{
+  display: table;
+  margin:0 auto;
+  top: 10px;
 }
 
 @keyframes square-to-circle {
@@ -45,6 +54,7 @@ html,body {
     transform:rotate(180deg);
   }
 }
+/*End Main Welcome*/
 
 /*James*/
 
