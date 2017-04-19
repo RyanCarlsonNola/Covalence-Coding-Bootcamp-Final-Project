@@ -2,7 +2,9 @@ angular.module('CODEocalypse.controllers', [])
 
     .controller('WelcomeController', ['$scope', '$location', function($scope, $location) {
         $(document).ready(function(){
-            
+            $('#ja_testdiv').click(function() {
+                $('#ja_testdiv').css('animation', 'none');
+            });
         });
     }])
     

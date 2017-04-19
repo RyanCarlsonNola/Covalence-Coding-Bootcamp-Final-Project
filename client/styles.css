@@ -10,11 +10,12 @@ html,body {
   width:50%;
   height:100%;
   float:left;
+  background-color:lightgrey;
 }
-.contents{
+/*.contents{
   height:50%;
   width:100%;
-}
+}*/
 
 /*James*/
 
@@ -31,21 +32,21 @@ ja_mainWelcome {
   position: relative;
   left:0;
   right: 0;
-  top: 0;
+  top: 100px;
   bottom: 0;
   width: 300px;
   height: 300px;
   background-color: #88BB00;
   font-family: 'Droid Serif', serif;
-  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
+  animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;
 }
 
 #ja_divtext{
   position: fixed;
   text-align: center;
   text-shadow: 2px 2px grey;
-  right: 20px;
-  top: 125px;
+  right: 41%;
+  top: 24%;
   color: floralwhite;
   font-size: 40px;
 }
@@ -55,6 +56,7 @@ ja_mainWelcome {
     border-radius:0 0 0 0;
     background:#88BB00;
     transform:rotate(0deg);
+    background-color: darkgreen;
   }
   25%  {
     border-radius:50% 0 0 0;
