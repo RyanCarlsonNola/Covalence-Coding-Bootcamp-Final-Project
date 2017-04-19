@@ -12,43 +12,9 @@ html,body {
   float:left;
   background-color:lightgrey;
 }
-/*.contents{
+.contents{
   height:50%;
   width:100%;
-}*/
-
-/*James*/
-
-ja_mainWelcome {
-  position: relative;
-}
-
-.ja_welcomePage {
-  position: relative;
-}
-
-#ja_testdiv {
-  margin: auto;  
-  position: relative;
-  left:0;
-  right: 0;
-  top: 100px;
-  bottom: 0;
-  width: 300px;
-  height: 300px;
-  background-color: #88BB00;
-  font-family: 'Droid Serif', serif;
-  animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;
-}
-
-#ja_divtext{
-  position: fixed;
-  text-align: center;
-  text-shadow: 2px 2px grey;
-  right: 41%;
-  top: 24%;
-  color: floralwhite;
-  font-size: 40px;
 }
 
 @keyframes square-to-circle {
@@ -80,9 +46,71 @@ ja_mainWelcome {
   }
 }
 
+/*James*/
+
+ja_mainWelcome {
+  position: relative;
+}
+
+.ja_welcomePage {
+  position: relative;
+}
+
+#ja_JamesDiv{
+  margin: auto;  
+  position: relative;
+  left:0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #88BB00;
+  font-family: 'Droid Serif', serif;
+  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
+}
+
+#ja_divtext{
+  position: absolute;
+  text-align: center;
+  text-shadow: 2px 2px grey;
+  right: 41%;
+  top: 24%;
+  color: floralwhite;
+  font-size: 40px;
+}
+
 /*End James*/
 
 /*Ryan*/
+
+ry_mainWelcome {
+  position: relative;
+}
+
+#ry_RyanDiv{
+  margin: auto;  
+  position: relative;
+  left:0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #88BB00;
+  font-family: 'Droid Serif', serif;
+  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
+}
+
+#ry_divtext{
+  position: absolute;
+  text-align: center;
+  text-shadow: 2px 2px grey;
+  right: 41%;
+  top: 24%;
+  color: floralwhite;
+  font-size: 40px;
+}
 
 /*#ry_testdiv {
   width: 200px;
@@ -97,12 +125,66 @@ ja_mainWelcome {
   to {background-color: yellow;}
 }*/
 
-
-
 /*End Ryan*/
 
 /*Patrick*/
+
+pa_mainWelcome {
+  position: relative;
+}
+
+#pa_PatrickDiv{
+  margin: auto;  
+  position: relative;
+  left:0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #88BB00;
+  font-family: 'Droid Serif', serif;
+  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
+}
+
+#pa_divtext{
+  position: absolute;
+  text-align: center;
+  text-shadow: 2px 2px grey;
+  right: 41%;
+  top: 24%;
+  color: floralwhite;
+  font-size: 40px;
+}
 /*End Patrick*/
 
 /*Jim*/
+
+ji_mainWelcome {
+  position: relative;
+}
+
+#ji_JimDiv{
+  margin: auto;  
+  position: relative;
+  left:0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #88BB00;
+  font-family: 'Droid Serif', serif;
+  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
+}
+
+#ji_divtext{
+  position: absolute;
+  text-align: center;
+  text-shadow: 2px 2px grey;
+  right: 20%;
+  top: 24%;
+  color: floralwhite;
+  font-size: 40px;
+}
 /*End Jim*/
