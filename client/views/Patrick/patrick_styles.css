@@ -1,7 +1,15 @@
-.pa_now {
+.pa_now-btn{
+    border: 2px, bold, purple;
+}
+
+.pa_now-list {
     background-color: cadetblue;
 
 }
-.pa_then{
+
+.pa_then-btn{
+    border: 2px, bold, purple;
+}
+.pa_then-list{
     background-color: darkred;
 }
