@@ -6,7 +6,7 @@ html,body {
   min-height:100%;
  }
  /*div{
-   border: 1px solid white;
+   border: 1px solid orange;
  }*/
 .quarter{
   border: 1px solid white;
@@ -24,6 +24,25 @@ html,body {
   display: table;
   margin:0 auto;
   top: 10px;
+}
+
+#passwordRemove {
+  width: 2em;
+  color: darkred;
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+#passwordRemove {
+  color: darkred;
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+.glyphicon.glyphicon-remove-circle{
+  font-size: 2em;
 }
 
 @keyframes square-to-circle {

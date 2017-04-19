@@ -3,6 +3,7 @@ angular.module('CODEocalypse.controllers', [])
     .controller('WelcomeController', ['$scope', '$location', function($scope, $location) {
         $(document).ready(function(){
             $( "#passwordBox" ).hide();
+            $( "#passwordRemove" ).hide();
             $('#ja_JamesDiv').mouseover(function() {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
                 $('#ja_mainWelcome').css('background-image','url(images/heaven.jpg)');
@@ -32,7 +33,12 @@ angular.module('CODEocalypse.controllers', [])
                 $('#pa_mainWelcome').css('background-image','none');
             });
             $('.divButton').click(function(){
-                $( "#passwordBox" ).show();
+                $("#passwordBox").show();
+                $("#passwordRemove").show();
+            });
+            $('#passwordRemove').click(function(){
+                $("#passwordBox").hide();
+                $("#passwordRemove").hide();
             });
 
         });//document.ready
