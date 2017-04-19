@@ -72,7 +72,18 @@ ja_mainWelcome {
 
 /*Ryan*/
 
+/*#ry_testdiv {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  animation-name: conquesthorse;
+  animation-duration: 4s;
+}
 
+@keyframes conquesthorse {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}*/
 
 
 
