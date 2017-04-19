@@ -6,7 +6,8 @@ angular.module('CODEocalypse.controllers', [])
     
     .controller('JamesWelController', ['$scope', '$location', function($scope, $location) {
         $(document).ready(function(){
-            $('.parallax').parallax();
+            $('.carousel').carousel();
+            $('.materialboxed').materialbox();
         });
     }])
 
