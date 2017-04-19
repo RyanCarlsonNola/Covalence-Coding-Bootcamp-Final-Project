@@ -17,7 +17,9 @@ angular.module('CODEocalypse.controllers', [])
     }])
 
     .controller('RyanWelController', ['$scope', '$location', function($scope, $location) {
-        
+        $(document).ready(function(){
+            $('.carousel').carousel();
+        });
     }])
 
     .controller('PatrickWelController', ['$scope', '$location', function($scope, $location) {
