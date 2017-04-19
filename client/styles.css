@@ -37,7 +37,17 @@ ja_mainWelcome {
   height: 300px;
   background-color: #88BB00;
   font-family: 'Droid Serif', serif;
-  animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
+}
+
+#ja_divtext{
+  position: fixed;
+  text-align: center;
+  text-shadow: 2px 2px grey;
+  right: 20px;
+  top: 125px;
+  color: floralwhite;
+  font-size: 40px;
 }
 
 @keyframes square-to-circle {
