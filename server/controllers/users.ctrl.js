@@ -84,15 +84,15 @@ router.route("/:id")
                 res.status(500).send(err);
             });
     })
-    .delete(auth.isAdmin, function (req, res) {
-        return procedures.destroy(req.params.id)
-            .then(function (success) {
-                res.sendStatus(201);
-            }, function (err) {
-                console.log(err);
-                res.status(500).send(err);
-            });
-    })
+    // .delete(auth.isAdmin, function (req, res) {
+    //     return procedures.destroy(req.params.id)
+    //         .then(function (success) {
+    //             res.sendStatus(201);
+    //         }, function (err) {
+    //             console.log(err);
+    //             res.status(500).send(err);
+    //         });
+    // })
     .put(auth.isAdmin, function (req, res) {
         return procedures.update(req.params.id, req.body.firstname, req.body.lastname, req.body.email)
             .then(function (success) {
