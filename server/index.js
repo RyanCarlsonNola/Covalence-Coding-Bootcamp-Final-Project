@@ -14,7 +14,7 @@ app.use(cookieParser());
 
 configurePassport(app);
 
-app.use('./api', api);
+app.use('/api', api);
 
 app.get("*", function(req, res, next) {
     if(routeMw.isAsset(req.url)) {
