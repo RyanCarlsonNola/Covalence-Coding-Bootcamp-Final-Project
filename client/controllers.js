@@ -20,10 +20,10 @@ angular.module('CODEocalypse.controllers', [])
             });
             $('#ji_JimDiv').mouseover(function() {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#ji_mainWelcome').css('background-image','none');
+                $('#ji_mainWelcome').css('background-image','url(images/theGreatWavesmall.jpg');
             }).mouseout(function(){
                 $(this).css('animation', 'none');
-                $('#ji_mainWelcome').css('background-image','url(images/theGreatWave.jpg');
+                $('#ji_mainWelcome').css('background-image','none');
             });
             $('#pa_PatrickDiv').mouseover(function() {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
