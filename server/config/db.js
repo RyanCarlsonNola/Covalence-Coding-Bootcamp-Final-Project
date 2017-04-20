@@ -2,7 +2,7 @@ var mysql = require("mysql");
 
 var pool = mysql.createPool({
     connectionLimit: 10,
-    host: "localhost",
+    host: "covinstance.cifwyidf5tpm.us-east-1.rds.amazonaws.com",
     user: process.env.DB_U,
     password: process.env.DB_PASS,
     database: "CovalenceStore"
@@ -37,7 +37,7 @@ function sendQuery(procedure, values){
             if (err) {
                 reject(err);
             } else {
-                var queryString = "CALL" + procedure + parseParams(values.length);
+                var queryString = "CALL " + procedure + parseParams(values.length);
                 connection.query(queryString, values, function (err, resultSets) {
                     connection.release();
                     if (err) {
