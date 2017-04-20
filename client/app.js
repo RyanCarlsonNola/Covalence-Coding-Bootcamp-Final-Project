@@ -1,4 +1,4 @@
-var app = angular.module('CODEocalypse', ['CODEocalypse.factories','CODEocalypse.controllers', 'ngRoute', 'ngResource']);
+var app = angular.module('CODEocalypse', ['CODEocalypse.factories','CODEocalypse.controllers', 'CODEocalypse.services', 'ngRoute', 'ngResource']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
     $locationProvider.html5Mode(true);

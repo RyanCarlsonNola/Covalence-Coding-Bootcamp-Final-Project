@@ -13,19 +13,19 @@ exports.pool = pool;
 //CALL A MYSQL QUERY THAT HAS NO RETURN VALUES
 exports.empty = function (procedure, values) {
     return sendQuery(procedure, values).then(function () {
-        return;
+        return[0];
     })
 };
 
 //CALL A MYSQL QUERY THAT RETURNS A SINGLE ROW
-exports.row = function(procedures, values) {
+exports.row = function(procedure, values) {
     return sendQuery(procedure, values).then(function (resultSets) {
         return resultSets[0];
     })
 };
 
 //CALL A MYSQL QUERY THAT RETURNS MULTIPLE ROWS
-exports.rows = function(procedure, value) {
+exports.rows = function(procedure, values) {
     return sendQuery(procedure, values).then(function (resultSets) {
         return resultSets[0];
     })
