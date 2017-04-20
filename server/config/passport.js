@@ -16,19 +16,25 @@ function configurePassport(app) {
             if(!user) {
                 return done(null, false);
             }
-            if(user.password !== password) {
-                return done(null, false, {message: "Nope!"});
-            }
-            return done(null, user);
+            utils.checkPassword(password, user.password)
+                .then(function(matches) {
+                    if(matches) {
+                        return done(null, user);
+                    } else {
+                        return done(null, false, {message: "Password does not match"});
+                    }
+                }, function(err) {
+                    return done(err);
+                })
         }, function(err) {
             return done(err);
         })
     }));
-    //SET UP HOW TO HANDLE USER-SERIALIZATION
+
     passport.serializeUser(function(user, done) {
         done(null, user.id);
     })
-    //SET UP HOW TO HANDLE USER-DESERIALIZATION
+
     passport.deserializeUser(function(id, done) {
         userProc.read(id).then(function(user) {
             done(null, user);
