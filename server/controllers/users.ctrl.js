@@ -1,6 +1,7 @@
 var express = require("express");
 var procedures = require("../procedures/users.proc");
 var auth = require("../middleware/auth.mw");
+var utils = require('../middleware/utils');
 var passport = require("passport");
 var eSvc = require("../services/email.svc");
 
