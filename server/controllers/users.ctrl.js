@@ -32,7 +32,7 @@ router.get("/logout", function(req, res) {
     })
 });
 
-router.all("*", auth.isLoggedIn);
+// router.all("*", auth.isLoggedIn);
 
 router.get('/', function (req, res) {
     procedures.all().then(function (success) {
