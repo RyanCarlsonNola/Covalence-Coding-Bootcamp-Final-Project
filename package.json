@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/jamescpurcell/CODEocalypse#readme",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "sendgrid": "^5.0.0",
