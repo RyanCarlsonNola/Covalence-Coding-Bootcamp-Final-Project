@@ -8,6 +8,6 @@ exports.read = function(id) {
     return db.row('getUser', [id]);
 }
 
-exports.update = function(id, password) {
+exports.update = function(id, hash) {
     return db.empty("updatePassword", [id, hash]);
 }
