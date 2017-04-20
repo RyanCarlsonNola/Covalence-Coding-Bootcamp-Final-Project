@@ -9,5 +9,5 @@ exports.read = function(id) {
 }
 
 exports.update = function(id, password) {
-    return db.empty("updatePassword", [id, password]);
+    return db.empty("updatePassword", [id, hash]);
 }
