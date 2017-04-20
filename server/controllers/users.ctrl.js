@@ -3,7 +3,6 @@ var procedures = require("../procedures/users.proc");
 var auth = require("../middleware/auth.mw");
 var utils = require('../middleware/utils');
 var passport = require("passport");
-var eSvc = require("../services/email.svc");
 
 var router = express.Router();
 
@@ -18,9 +17,9 @@ router.post('/login', function (req, res, next) {
         req.logIn(user, function (err) {
             if (err) { return res.sendStatus(500); }
             else { 
-                eSvc.sendEmail(user.email,
-                "You have Logged In",
-                "Yep, you logged in! If you think this was an error, contact us at some address");
+                //eSvc.sendEmail(user.email,
+                //"You have Logged In",
+                //"Yep, you logged in! If you think this was an error, contact us at some address");
                 return res.send(user); }
         });
     })(req, res, next);
