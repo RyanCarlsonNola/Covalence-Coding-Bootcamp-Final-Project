@@ -1,4 +1,5 @@
 var express = require("express");
+var bodyParser = require("body-parser");
 var procedures = require("../procedures/users.proc");
 var auth = require("../middleware/auth.mw");
 var utils = require("../middleware/utils");
