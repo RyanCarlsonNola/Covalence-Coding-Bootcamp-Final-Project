@@ -26,6 +26,12 @@ html,body {
   top: 10px;
 }
 
+#userBox{
+  display: table;
+  margin:0 auto;
+  top: 10px;
+}
+
 #passwordRemove {
   width: 2em;
   color: darkred;
