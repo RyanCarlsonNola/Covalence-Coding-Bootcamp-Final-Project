@@ -1,1 +1,1 @@
-var db = require('./db');
+var db = require("../config/db");
