@@ -4,7 +4,7 @@
   "description": "The four horseman's resume site",
   "main": "server/index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "source .variables && nodemon"
   },
   "repository": {
     "type": "git",
