@@ -1,6 +1,6 @@
 angular.module('CODEocalypse.controllers', [])
 
-    .controller('WelcomeController', ['$scope', '$location', 'UserService', function($scope, $location, UserService) {
+    .controller('WelcomeController', ['$scope', '$location', 'UserService', function ($scope, $location, UserService) {
         UserService.me().then(function (success) {
             redirect();
         });
@@ -18,89 +18,105 @@ angular.module('CODEocalypse.controllers', [])
             })
         }
 
-        $(document).ready(function(){
-            $( "#passwordBox" ).hide();
-            $( "#passwordRemove" ).hide();
+        $(document).ready(function () {
+            $("#passwordBox").hide();
+            $("#passwordRemove").hide();
             // $( "#userBox" ).hide();
-            $( "#loginButton" ).hide();
+            $("#loginButton").hide();
 
-            $('#ja_JamesDiv').mouseover(function() {
+            $('#ja_JamesDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#ja_mainWelcome').css('background-image','url(images/heaven.jpg)');
-            }).mouseout(function(){
+                $('#ja_mainWelcome').css('background-image', 'url(images/heaven.jpg)');
+            }).mouseout(function () {
                 $(this).css('animation', 'none');
-                $('#ja_mainWelcome').css('background-image','none');
+                $('#ja_mainWelcome').css('background-image', 'none');
             });
-            $('#ry_RyanDiv').mouseover(function() {
+            $('#ry_RyanDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#ry_mainWelcome').css('background-image','url()');
-            }).mouseout(function(){
+                $('#ry_mainWelcome').css('background-image', 'url()');
+            }).mouseout(function () {
                 $(this).css('animation', 'none');
-                $('#ry_mainWelcome').css('background-image','none');
+                $('#ry_mainWelcome').css('background-image', 'none');
             });
-            $('#ji_JimDiv').mouseover(function() {
+            $('#ji_JimDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#ji_mainWelcome').css('background-image','url(images/theGreatWavesmall.jpg');
-            }).mouseout(function(){
+                $('#ji_mainWelcome').css('background-image', 'url(images/theGreatWavesmall.jpg');
+            }).mouseout(function () {
                 $(this).css('animation', 'none');
-                $('#ji_mainWelcome').css('background-image','none');
+                $('#ji_mainWelcome').css('background-image', 'none');
             });
-            $('#pa_PatrickDiv').mouseover(function() {
+            $('#pa_PatrickDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#pa_mainWelcome').css('background-image','none');
-            }).mouseout(function(){
+                $('#pa_mainWelcome').css('background-image', 'none');
+            }).mouseout(function () {
                 $(this).css('animation', 'none');
-                $('#pa_mainWelcome').css('background-image','none');
+                $('#pa_mainWelcome').css('background-image', 'none');
             });
-            $('.divButton').click(function(){
+            $('.divButton').click(function () {
                 $("#passwordBox").show();
                 $("#passwordRemove").show();
             });
-            $('#passwordRemove').click(function(){
+            $('#passwordRemove').click(function () {
                 $("#passwordBox").hide();
                 $("#passwordRemove").hide();
             });
 
         });//document.ready
     }])//WelcomeController
+<<<<<<< HEAD
     
     .controller('JamesWelController', ['$scope', '$location', 'User', 'UserService', '$routeParams', function($scope, $location, User, UserService, $routeParams) {
         UserService.requireLogin();
+=======
+
+    .controller('JamesWelController', ['$scope', '$location', 'User', 'UserService', '$routeParams', function ($scope, $location, User, UserService, $routeParams) {
+        // UserService.requireLogin();
+>>>>>>> c0bd395cb6ab52f2012db5b3efc901949846e246
         $scope.users = User.query();
 
-        $scope.updateUser = function(id) {
-            User.get({ id: id}, function(success){
+        $scope.updateUser = function (id) {
+            User.get({ id: id }, function (success) {
                 success.password = $('.ja_password').val();
-                success.$update(function(){
+                success.$update(function () {
                     $scope.users = User.query();
                 })
             });
         }
 
-        $scope.logOutUser = function() {
+        $scope.logOutUser = function () {
             UserService.logout()
-                .then(function(){
+                .then(function () {
                     $location.path('/');
-                }, function (err){
+                }, function (err) {
                     console.log(err)
                 })
         }
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $(".dropdown-button").dropdown();
         });
     }])
 
-    .controller('JimWelController', ['$scope', '$location', function($scope, $location) {
+    .controller('JimWelController', ['$scope', '$location', function ($scope, $location) {
 
     }])
 
-    .controller('RyanWelController', ['$scope', '$location', function($scope, $location) {
-        $(document).ready(function(){
+    .controller('RyanWelController', ['$scope', '$location', function ($scope, $location) {
+        $(document).ready(function () {
             $('.carousel').carousel();
+            // $(document).on({
+            //     mouseenter: function () {
+            //         $(this).css({ width: "100%", height: "100%" });
+            //     },
+
+            //     mouseleave: function () {
+            //         $(this).css({ width: "auto", height: "auto" });
+            //     }
+            // }, '#test');
+
         });
     }])
 
-    .controller('PatrickWelController', ['$scope', '$location', function($scope, $location) {
-        
+    .controller('PatrickWelController', ['$scope', '$location', function ($scope, $location) {
+
     }])
