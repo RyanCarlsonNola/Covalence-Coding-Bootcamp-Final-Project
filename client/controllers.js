@@ -63,15 +63,10 @@ angular.module('CODEocalypse.controllers', [])
 
         });//document.ready
     }])//WelcomeController
-<<<<<<< HEAD
-    
-    .controller('JamesWelController', ['$scope', '$location', 'User', 'UserService', '$routeParams', function($scope, $location, User, UserService, $routeParams) {
-        UserService.requireLogin();
-=======
 
     .controller('JamesWelController', ['$scope', '$location', 'User', 'UserService', '$routeParams', function ($scope, $location, User, UserService, $routeParams) {
         // UserService.requireLogin();
->>>>>>> c0bd395cb6ab52f2012db5b3efc901949846e246
+
         $scope.users = User.query();
 
         $scope.updateUser = function (id) {
