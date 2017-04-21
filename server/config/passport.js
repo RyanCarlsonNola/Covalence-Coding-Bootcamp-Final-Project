@@ -11,8 +11,8 @@ function configurePassport(app) {
     passport.use(new LocalStrategy({
         usernameField: 'user',
         passwordField: 'password'
-    }, function(email, password, done) {
-        userProc.readByEmail(email).then(function(user) {
+    }, function(user, password, done) {
+        userProc.readByEmail(user).then(function(user) {
             if(!user) {
                 return done(null, false);
             }
