@@ -174,7 +174,7 @@ ry_mainWelcome {
 }
 
 .ry_btn-social:hover {
-    transform: scale(2, 2); /** default is 1, scale it to 1.5 */
+    transform: scale(1.75, 1.75); /** default is 1, scale it to 1.5 */
     opacity: 1;
 }
 /*End Ryan*/
