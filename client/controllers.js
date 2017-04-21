@@ -70,7 +70,7 @@ angular.module('CODEocalypse.controllers', [])
 
         $scope.updateUser = function(id) {
             User.get({ id: id}, function(success){
-                success.password = $('#ja_password').val();
+                success.password = $('.ja_password').val();
                 success.$update(function(){
                     $scope.users = User.query();
                 })
