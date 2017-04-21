@@ -115,6 +115,16 @@ ja_mainWelcome {
   font-size: 40px;
 }
 
+.ja_resumeName {
+  position: absolute;
+  left: 0;
+}
+
+.ja_logOutButton {
+  position: relative;
+  left: 210px;
+}
+
 /*End James*/
 
 /*Ryan*/
