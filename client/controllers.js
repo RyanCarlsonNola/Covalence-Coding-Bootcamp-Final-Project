@@ -115,5 +115,12 @@ angular.module('CODEocalypse.controllers', [])
     }])
 
     .controller('PatrickWelController', ['$scope', '$location', function ($scope, $location) {
-
+$(document).ready(function(){
+    $(".pa_now-btn").click(function(){
+        $(".pa_now-list").slideToggle();
+    });
+    $(".pa_then-btn").click(function(){
+        $(".pa_then-list").slideToggle();
+    });
+});
     }])
