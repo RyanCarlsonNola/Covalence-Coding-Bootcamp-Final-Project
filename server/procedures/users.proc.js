@@ -4,7 +4,7 @@ exports.all = function() {
     return db.rows('getUsers', [])
 }
 
-exports.readByEmail = function(user) {
+exports.read = function(user) {
     return db.row('getUser', [user]);
 }
 
