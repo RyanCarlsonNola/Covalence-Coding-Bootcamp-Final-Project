@@ -18,11 +18,11 @@ app.service('UserService', ['$http', '$location', function($http, $location) {
         }
     }
 
-    this.login = function(user, password) {
+    this.login = function(email, password) {
         return $http({
             method: "POST",
             url: "http://localhost:3000/api/users/login",
-            data: {user, password}
+            data: {email, password}
         }).then(function(success) {
             user = success.data;
             return success.data;

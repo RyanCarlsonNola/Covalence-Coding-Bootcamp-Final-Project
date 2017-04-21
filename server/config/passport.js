@@ -9,9 +9,9 @@ var utils = require("../middleware/utils");
 
 function configurePassport(app) {
     passport.use(new LocalStrategy({
-        usernameField: 'user',
+        usernameField: 'email',
         passwordField: 'password'
-    }, function(user, password, done) {
+    }, function(email, password, done) {
         userProc.readByEmail(user).then(function(user) {
             if(!user) {
                 return done(null, false);
