@@ -84,7 +84,7 @@ router.get("/me", function (req, res) {
 //     })
 // });
 
-router.route("/james")
+router.route("/:id")
     .get( function (req, res) {
         return procedures.read(req.params.id)
             .then(function (success) {
@@ -105,7 +105,7 @@ router.route("/james")
     // })
     .put(auth.isAdmin, function (req, res) {
         utils.encryptPassword(req.body.password).then(function (hash) {
-        return procedures.update("james", hash)
+        return procedures.update(req.params.id, hash)
             .then(function (success) {
                 res.sendStatus(204);
             }, function (err) {

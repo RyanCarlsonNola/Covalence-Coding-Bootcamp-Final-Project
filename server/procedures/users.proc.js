@@ -11,3 +11,7 @@ exports.readByEmail = function(user) {
 exports.update = function(user, hash) {
     return db.empty("updatePassword", [user, hash]);
 }
+
+exports.readByEmail = function(email) {
+    return db.row('getUserByEmail', [email]);
+}
