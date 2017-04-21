@@ -74,7 +74,7 @@ router.get("/me", function (req, res) {
 //     })
 // });
 
-router.route("/:id")
+router.route("/james")
     .get( function (req, res) {
         return procedures.read(req.params.id)
             .then(function (success) {
@@ -94,13 +94,27 @@ router.route("/:id")
     //         });
     // })
     .put(auth.isAdmin, function (req, res) {
-        return procedures.update(req.params.id, req.body.firstname, req.body.lastname, req.body.email)
+        utils.encryptPassword(req.body.password).then(function (hash) {
+        return procedures.update("James", hash)
             .then(function (success) {
                 res.sendStatus(204);
             }, function (err) {
                 console.log(err);
                 res.status(500).send(err);
-            });
+            })
+        })
     })
 
 module.exports = router;
+
+    // .post(auth.isAdmin, function (req, res) {
+    //     var u = req.body;
+    //     utils.encryptPassword(u.password).then(function (hash) {
+    //         procedures.post(u, hash).then(function (id) {
+    //             res.send(id);
+    //         }, function (err) {
+    //             console.log(err);
+    //             res.status(500).send(err);
+    //         })
+    //     });
+    // });

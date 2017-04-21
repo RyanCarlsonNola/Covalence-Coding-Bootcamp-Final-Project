@@ -156,20 +156,27 @@ ry_mainWelcome {
   color: floralwhite;
   font-size: 40px;
 }
-
-/*#ry_testdiv {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  animation-name: conquesthorse;
-  animation-duration: 4s;
+/*.ry_thumbnail:hover {
+    position:relative;
+    top: 5px;
+    left: 5px;
+    width: 1000px;
+    height: auto;
+    display: block;
+    z-index:2000;
+}*/
+.ry_btn-social {
+    width: 300px;
+    position: relative;
+    opacity: 1;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
-@keyframes conquesthorse {
-  from {background-color: red;}
-  to {background-color: yellow;}
-}*/
-
+.ry_btn-social:hover {
+    transform: scale(1.75, 1.75); /** default is 1, scale it to 1.5 */
+    opacity: 1;
+}
 /*End Ryan*/
 
 /*Patrick*/
