@@ -47,7 +47,7 @@ angular.module('CODEocalypse.controllers', [])
             });
             $('#pa_PatrickDiv').mouseover(function() {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#pa_mainWelcome').css('background-image','none');
+                $('#pa_mainWelcome').css('background-image','url(images/patrojo.jpg)');
             }).mouseout(function(){
                 $(this).css('animation', 'none');
                 $('#pa_mainWelcome').css('background-image','none');
