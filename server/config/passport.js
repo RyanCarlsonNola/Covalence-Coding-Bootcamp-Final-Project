@@ -9,23 +9,23 @@ var utils = require("../middleware/utils");
 
 function configurePassport(app) {
     passport.use(new LocalStrategy({
-        usernameField: 'email',
+        usernameField: 'user',
         passwordField: 'password'
     }, function(email, password, done) {
         userProc.readByEmail(email).then(function(user) {
             if(!user) {
                 return done(null, false);
             }
-            utils.checkPassword(password, user.password)
-                .then(function(matches) {
-                    if(matches) {
-                        return done(null, user);
-                    } else {
-                        return done(null, false, {message: "Password does not match"});
-                    }
-                }, function(err) {
-                    return done(err);
-                })
+            // utils.checkPassword(password, user.password)
+            //     .then(function(matches) {
+            //         if(matches) {
+            //             return done(null, user);
+            //         } else {
+            //             return done(null, false, {message: "Password does not match"});
+            //         }
+            //     }, function(err) {
+            //         return done(err);
+            //     })
         }, function(err) {
             return done(err);
         })

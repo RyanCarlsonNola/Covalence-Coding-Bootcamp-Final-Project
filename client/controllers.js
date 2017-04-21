@@ -11,7 +11,7 @@ angular.module('CODEocalypse.controllers', [])
         }
 
         $scope.login = function () {
-            UserService.login($scope.email, $scope.password).then(function () {
+            UserService.login($scope.user, $scope.password).then(function () {
                 redirect();
             }, function (err) {
                 console.log(err);
