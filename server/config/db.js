@@ -2,7 +2,7 @@ var mysql = require("mysql");
 
 var pool = mysql.createPool({
     connectionLimit: 10,
-    host: "localhost",
+    host: "covinstance.cifwyidf5tpm.us-east-1.rds.amazonaws.com",
     user: process.env.DB_U,
     password: process.env.DB_PASS,
     database: "CovalenceStore"
@@ -18,14 +18,14 @@ exports.empty = function (procedure, values) {
 };
 
 //CALL A MYSQL QUERY THAT RETURNS A SINGLE ROW
-exports.row = function(procedures, values) {
+exports.row = function(procedure, values) {
     return sendQuery(procedure, values).then(function (resultSets) {
-        return resultSets[0];
+        return resultSets[0][0];
     })
 };
 
 //CALL A MYSQL QUERY THAT RETURNS MULTIPLE ROWS
-exports.rows = function(procedure, value) {
+exports.rows = function(procedure, values) {
     return sendQuery(procedure, values).then(function (resultSets) {
         return resultSets[0];
     })
@@ -37,7 +37,7 @@ function sendQuery(procedure, values){
             if (err) {
                 reject(err);
             } else {
-                var queryString = "CALL" + procedure + parseParams(values.length);
+                var queryString = "CALL " + procedure + parseParams(values.length);
                 connection.query(queryString, values, function (err, resultSets) {
                     connection.release();
                     if (err) {
