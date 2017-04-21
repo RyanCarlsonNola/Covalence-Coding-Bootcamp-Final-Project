@@ -66,6 +66,7 @@ angular.module('CODEocalypse.controllers', [])
 
     .controller('JamesWelController', ['$scope', '$location', 'User', 'UserService', '$routeParams', function ($scope, $location, User, UserService, $routeParams) {
         // UserService.requireLogin();
+
         $scope.users = User.query();
 
         $scope.updateUser = function (id) {

@@ -4,10 +4,10 @@ exports.all = function() {
     return db.rows('getUsers', [])
 }
 
-exports.read = function(id) {
-    return db.row('getUser', [id]);
+exports.readByEmail = function(email) {
+    return db.row('getUser', [email]);
 }
 
-exports.update = function(id, hash) {
-    return db.empty("updatePassword", [id, hash]);
+exports.update = function(user, hash) {
+    return db.empty("updatePassword", [user, hash]);
 }
