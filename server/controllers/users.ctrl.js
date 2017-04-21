@@ -58,6 +58,16 @@ router.get("/logout", function (req, res) {
     })
 })
 
+// router.get('/generateHash/:pw', function(req, res) {
+//     utils.encryptPassword(req.params.pw)
+//     .then(function(hash) {
+//         res.send(hash);
+//     }, function(err) {
+//         console.log(err);
+//         res.sendStatus(500);
+//     });
+// })
+
 //changed to all from get
 router.all("*", auth.isLoggedIn);
 
@@ -95,7 +105,7 @@ router.route("/james")
     // })
     .put(auth.isAdmin, function (req, res) {
         utils.encryptPassword(req.body.password).then(function (hash) {
-        return procedures.update("James", hash)
+        return procedures.update("james", hash)
             .then(function (success) {
                 res.sendStatus(204);
             }, function (err) {
