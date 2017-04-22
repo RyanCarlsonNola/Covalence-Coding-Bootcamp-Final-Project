@@ -12,7 +12,7 @@ angular.module('CODEocalypse.controllers', [])
 
         $scope.login = function () {
             UserService.login($scope.email, $scope.password).then(function () {
-                redirect();
+                $location.path('/' + $scope.email);
             }, function (err) {
                 console.log(err);
             })
@@ -21,7 +21,7 @@ angular.module('CODEocalypse.controllers', [])
         $(document).ready(function () {
             $("#passwordBox").hide();
             $("#passwordRemove").hide();
-            // $( "#userBox" ).hide();
+            $( "#userBox" ).hide();
             $("#loginButton").hide();
 
             $('#ja_JamesDiv').mouseover(function () {
@@ -54,9 +54,29 @@ angular.module('CODEocalypse.controllers', [])
                 $(this).css('animation', 'none');
                 $('#pa_mainWelcome').css('background-image', 'none');
             });
-            $('.divButton').click(function () {
+            $('#ja_JamesDiv').click(function () {
                 $("#passwordBox").show();
                 $("#passwordRemove").show();
+                $('.userLogin').val('james');
+                $scope.email = 'james';
+            });
+            $('#ji_JimDiv').click(function () {
+                $("#passwordBox").show();
+                $("#passwordRemove").show();
+                $('.userLogin').val('jim');
+                $scope.email = 'jim';
+            });
+            $('#pa_PatrickDiv').click(function () {
+                $("#passwordBox").show();
+                $("#passwordRemove").show();
+                $('.userLogin').val('patrick');
+                $scope.email = 'patrick';
+            });
+            $('#ry_RyanDiv').click(function () {
+                $("#passwordBox").show();
+                $("#passwordRemove").show();
+                $('.userLogin').val('ryan');
+                $scope.email = 'ryan';
             });
             $('#passwordRemove').click(function () {
                 $("#passwordBox").hide();
