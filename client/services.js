@@ -3,6 +3,7 @@ var app = angular.module("CODEocalypse.services", []);
 app.service('UserService', ['$http', '$location', function($http, $location) {
     
     var user;
+    var pathUser;
     
     this.isLoggedIn = function() {
         if(!user) {
@@ -14,7 +15,7 @@ app.service('UserService', ['$http', '$location', function($http, $location) {
     this.requireLogin = function() {
         if(!this.isLoggedIn()) {
             var current = $location.path();
-            $location.path('/login').search('p', current);
+            $location.path('/').search('p', current);
         }
     }
 
@@ -25,6 +26,8 @@ app.service('UserService', ['$http', '$location', function($http, $location) {
             data: {email, password}
         }).then(function(success) {
             user = success.data;
+            pathUser = success.data.user;
+            console.log(pathUser);
             return success.data;
         })
     }
@@ -35,6 +38,7 @@ app.service('UserService', ['$http', '$location', function($http, $location) {
             url: "http://localhost:3000/api/users/logout"
         }).then(function(success) {
             user = undefined;
+            pathUser = undefined;
         })
     }
 
