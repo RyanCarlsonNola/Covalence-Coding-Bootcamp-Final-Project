@@ -17,17 +17,17 @@ router.route("/")
                 res.status(500).send(err);
             });
     })
-    .post(auth.isAdmin, function (req, res) {
-        var u = req.body;
-        utils.encryptPassword(u.password).then(function (hash) {
-            procedures.post(u, hash).then(function (id) {
-                res.send(id);
-            }, function (err) {
-                console.log(err);
-                res.status(500).send(err);
-            })
-        });
-    });
+    // .post(auth.isAdmin, function (req, res) {
+    //     var u = req.body;
+    //     utils.encryptPassword(u.password).then(function (hash) {
+    //         procedures.post(u, hash).then(function (id) {
+    //             res.send(id);
+    //         }, function (err) {
+    //             console.log(err);
+    //             res.status(500).send(err);
+    //         })
+    //     });
+    // });
 
 router.post('/login', function (req, res, next) {
     passport.authenticate('local', function (err, user, info) {
@@ -104,7 +104,7 @@ router.route("/:id")
     //         });
     // })
     .put(auth.isAdmin, function (req, res) {
-        utils.encryptPassword(req.body.password).then(function (hash) {
+        utils.encryptPassword(req.body.password).then(function(hash) {
         return procedures.update(req.params.id, hash)
             .then(function (success) {
                 res.sendStatus(204);
