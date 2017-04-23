@@ -96,6 +96,8 @@ angular.module('CODEocalypse.controllers', [])
                 success.$update(function () {
                     $scope.users = User.query();
                 })
+                Materialize.toast('password successfully changed', 4000)
+                location.reload();
             });
         }
 
