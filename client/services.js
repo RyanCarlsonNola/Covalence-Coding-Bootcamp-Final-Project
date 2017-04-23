@@ -15,7 +15,7 @@ app.service('UserService', ['$http', '$location', function($http, $location) {
     this.requireLogin = function() {
         if(!this.isLoggedIn()) {
             var current = $location.path();
-            $location.path('/').search('p', current);
+            $location.path(current).search('p', current);
         }
     }
 
@@ -27,7 +27,6 @@ app.service('UserService', ['$http', '$location', function($http, $location) {
         }).then(function(success) {
             user = success.data;
             pathUser = success.data.user;
-            console.log(pathUser);
             return success.data;
         })
     }
