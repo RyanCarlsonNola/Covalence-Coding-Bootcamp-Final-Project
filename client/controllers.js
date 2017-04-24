@@ -194,11 +194,17 @@ angular.module('CODEocalypse.controllers', [])
         }
 
         $(document).ready(function () {
-            $(".pa_now-btn").click(function () {
-                $(".pa_now-list").slideToggle();
+            $("#pa_now-list").hide();
+            $("#pa_now-btn").click(function () {
+                $("#pa_now-list").slideToggle();
             });
-            $(".pa_then-btn").click(function () {
-                $(".pa_then-list").slideToggle();
+            $("#pa_then-list").hide();
+            $("#pa_then-btn").click(function () {
+                $("#pa_then-list").slideToggle();
             });
+
+            
+    $('.collapsible').collapsible();
+       
         });
     }])

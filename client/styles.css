@@ -292,6 +292,44 @@ pa_mainWelcome {
   color: floralwhite;
   font-size: 40px;
 }
+#pa_now-btn{
+    text-align: center;
+    background-color: lawngreen;
+    border: 5px, bold, purple;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+}
+
+#pa_now-list {
+    background-color: cadetblue;
+
+}
+
+#pa_then-btn{
+    text-align: center;
+    background-color: lightcoral;
+    border: 5px, bold, purple;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+}
+#pa_then-list{
+    background-color: darkred;
+}
+#pa_navbar{
+    overflow: hidden;
+    background-color: peru;
+    position: relative; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+#pa_navbarcontent {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 /*End Patrick*/
 
 /*Jim*/

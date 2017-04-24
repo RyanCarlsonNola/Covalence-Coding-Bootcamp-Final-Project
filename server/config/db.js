@@ -7,6 +7,7 @@ var pool = mysql.createPool({
     password: process.env.DB_PASS,
     database: "CovalenceStore"
 })
+console.log(pool);
 
 exports.pool = pool;
 
