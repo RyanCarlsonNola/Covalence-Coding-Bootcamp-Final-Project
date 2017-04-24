@@ -126,11 +126,14 @@ ja_mainWelcome {
 }
 
 #ja_profilePic {
-  left: 50%;
+  position: absolute;
+  right: 45%;
+  z-index: 2;
 }
 
 #ja_headingBanner {
-  
+  position: relative;
+  opacity: 0.2;
 }
 
 /*End James*/
