@@ -26,53 +26,67 @@ angular.module('CODEocalypse.controllers', [])
 
             $('#ja_JamesDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#ja_mainWelcome').css('background-image', 'url(images/heaven.jpg)');
+                // $('#ja_mainWelcome').css('background-image', 'url(images/heaven.jpg)');
             }).mouseout(function () {
                 $(this).css('animation', 'none');
-                $('#ja_mainWelcome').css('background-image', 'none');
+                // $('#ja_mainWelcome').css('background-image', 'none');
             });
             $('#ry_RyanDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#ry_mainWelcome').css('background-image', 'url()');
+                // $('#ry_mainWelcome').css('background-image', 'url()');
             }).mouseout(function () {
                 $(this).css('animation', 'none');
-                $('#ry_mainWelcome').css('background-image', 'none');
+                // $('#ry_mainWelcome').css('background-image', 'none');
             });
             $('#ji_JimDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#ji_mainWelcome').css('background-image', 'url(images/theGreatWavesmall.jpg');
+                // $('#ji_mainWelcome').css('background-image', 'url(images/theGreatWavesmall.jpg');
             }).mouseout(function () {
                 $(this).css('animation', 'none');
-                $('#ji_mainWelcome').css('background-image', 'none');
+                // $('#ji_mainWelcome').css('background-image', 'none');
             });
             $('#pa_PatrickDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                $('#pa_mainWelcome').css('background-image', 'url(images/patrojo.jpg)');
-            }).mouseout(function () {
-                $('#pa_mainWelcome').css('background-image', 'none');
+                // $('#pa_mainWelcome').css('background-image', 'url(images/patrojo.jpg)');
             }).mouseout(function () {
                 $(this).css('animation', 'none');
-                $('#pa_mainWelcome').css('background-image', 'none');
+                // $('#pa_mainWelcome').css('background-image', 'none');
             });
             $('#ja_JamesDiv').click(function () {
+                $('#ja_mainWelcome').css('background-image', 'url(images/heaven.jpg)');
+                $('#ji_mainWelcome').css('background-image', 'none');
+                $('#ry_mainWelcome').css('background-image', 'none');
+                $('#pa_mainWelcome').css('background-image', 'none');
                 $("#passwordBox").show();
                 $("#passwordRemove").show();
                 $('.userLogin').val('james');
                 $scope.email = 'james';
             });
             $('#ji_JimDiv').click(function () {
+                $('#ja_mainWelcome').css('background-image', 'none');
+                $('#ji_mainWelcome').css('background-image', 'url(images/theGreatWavesmall.jpg)');
+                $('#ry_mainWelcome').css('background-image', 'none');
+                $('#pa_mainWelcome').css('background-image', 'none');
                 $("#passwordBox").show();
                 $("#passwordRemove").show();
                 $('.userLogin').val('jim');
                 $scope.email = 'jim';
             });
             $('#pa_PatrickDiv').click(function () {
+                $('#ja_mainWelcome').css('background-image', 'none');
+                $('#ji_mainWelcome').css('background-image', 'none');
+                $('#ry_mainWelcome').css('background-image', 'none');
+                $('#pa_mainWelcome').css('background-image', 'url(images/patrojo.jpg)');
                 $("#passwordBox").show();
                 $("#passwordRemove").show();
                 $('.userLogin').val('patrick');
                 $scope.email = 'patrick';
             });
             $('#ry_RyanDiv').click(function () {
+                $('#ja_mainWelcome').css('background-image', 'none');
+                $('#ji_mainWelcome').css('background-image', 'none');
+                $('#ry_mainWelcome').css('background-image', 'none');
+                $('#pa_mainWelcome').css('background-image', 'none');
                 $("#passwordBox").show();
                 $("#passwordRemove").show();
                 $('.userLogin').val('ryan');
