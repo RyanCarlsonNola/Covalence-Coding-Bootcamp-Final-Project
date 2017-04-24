@@ -125,6 +125,17 @@ ja_mainWelcome {
   left: 210px;
 }
 
+#ja_profilePic {
+  position: absolute;
+  right: 45%;
+  z-index: 2;
+}
+
+#ja_headingBanner {
+  position: relative;
+  opacity: 0.2;
+}
+
 /*End James*/
 
 /*Ryan*/
