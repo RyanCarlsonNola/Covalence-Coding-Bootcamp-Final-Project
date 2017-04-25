@@ -28,4 +28,19 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         controller: 'RyanWelController',
         css: 'views/Ryan/ryan_styles.css'
     })
+    $routeProvider.when('/james/education', {
+        templateUrl: 'views/James/james_education.html',
+        controller: 'JamesEduController',
+        css: 'views/James/james_styles.css'
+    })
+    $routeProvider.when('/james/software', {
+        templateUrl: 'views/James/james_software.html',
+        controller: 'JamesSWController',
+        css: 'views/James/james_styles.css'
+    })
+    $routeProvider.when('/james/about', {
+        templateUrl: 'views/James/james_about.html',
+        controller: 'JamesABController',
+        css: 'views/James/james_styles.css'
+    })
 }])

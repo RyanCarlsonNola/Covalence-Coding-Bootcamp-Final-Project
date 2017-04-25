@@ -128,14 +128,107 @@ angular.module('CODEocalypse.controllers', [])
         }
 
         $(document).ready(function () {
-            var s = skrollr.init({
-                render: function(data) {
-                    //Debugging - Log the current scroll position.
-                    //console.log(data.curTop);
-                }   
-            });
-            $(".dropdown-button").dropdown();
+
         });
+    }])
+
+    .controller('JamesEduController', ['$scope', '$location', 'User', 'UserService', '$routeParams', function ($scope, $location, User, UserService, $routeParams) {
+        UserService.requireLogin();
+        $scope.users = User.query();
+
+        $scope.updateUser = function (id) {
+            User.get({ id: id }, function (success) {
+                success.password = $('.ja_password').val();
+                success.$update(function () {
+                    $scope.users = User.query();
+                })
+                
+                Materialize.toast('password successfully changed', 2000)
+                setTimeout(function(){
+                    location.reload();
+                }, 2000); 
+            });
+        }
+
+        $scope.logOutUser = function () {
+            UserService.logout()
+                .then(function () {
+                    $location.path('/');
+                }, function (err) {
+                    console.log(err)
+                })
+        }
+
+        $(document).ready(function () {
+
+        });
+
+    }])
+
+    .controller('JamesSWController', ['$scope', '$location', 'User', 'UserService', '$routeParams', function ($scope, $location, User, UserService, $routeParams) {
+        UserService.requireLogin();
+        $scope.users = User.query();
+
+        $scope.updateUser = function (id) {
+            User.get({ id: id }, function (success) {
+                success.password = $('.ja_password').val();
+                success.$update(function () {
+                    $scope.users = User.query();
+                })
+                
+                Materialize.toast('password successfully changed', 2000)
+                setTimeout(function(){
+                    location.reload();
+                }, 2000); 
+            });
+        }
+
+        $scope.logOutUser = function () {
+            UserService.logout()
+                .then(function () {
+                    $location.path('/');
+                }, function (err) {
+                    console.log(err)
+                })
+        }
+
+        $(document).ready(function () {
+
+        });
+
+    }])
+
+    .controller('JamesABController', ['$scope', '$location', 'User', 'UserService', '$routeParams', function ($scope, $location, User, UserService, $routeParams) {
+        UserService.requireLogin();
+        $scope.users = User.query();
+
+        $scope.updateUser = function (id) {
+            User.get({ id: id }, function (success) {
+                success.password = $('.ja_password').val();
+                success.$update(function () {
+                    $scope.users = User.query();
+                })
+                
+                Materialize.toast('password successfully changed', 2000)
+                setTimeout(function(){
+                    location.reload();
+                }, 2000); 
+            });
+        }
+
+        $scope.logOutUser = function () {
+            UserService.logout()
+                .then(function () {
+                    $location.path('/');
+                }, function (err) {
+                    console.log(err)
+                })
+        }
+
+        $(document).ready(function () {
+
+        });
+
     }])
 
     .controller('JimWelController', ['$scope', '$location', 'UserService', 'User', '$routeParams', function ($scope, $location, UserService, User, $routeParams) {
