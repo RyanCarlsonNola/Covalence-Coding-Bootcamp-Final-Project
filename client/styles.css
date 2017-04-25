@@ -297,9 +297,16 @@ pa_mainWelcome {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 35px;
 }
+#pa_now-pic{
+  width: 100%;
+}
+
+#pa_then-pic{
+  width: 100%;
+}
 
 #pa_now-list {
-    background-color: lightcoral;
+    background-color: salmon;
 
 }
 
@@ -315,7 +322,7 @@ pa_mainWelcome {
 }
 #pa_navbar{
     overflow: hidden;
-    background-color: peru;
+    background-color: peachpuff;
     position: relative; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
