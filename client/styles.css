@@ -294,26 +294,26 @@ pa_mainWelcome {
 }
 #pa_now-btn{
     text-align: center;
-    background-color: lawngreen;
+    background-color: goldenrod;
     border: 5px, bold, purple;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 35px;
 }
 
 #pa_now-list {
-    background-color: cadetblue;
+    background-color: lightcoral;
 
 }
 
 #pa_then-btn{
     text-align: center;
-    background-color: lightcoral;
+    background-color: lightsalmon;
     border: 5px, bold, purple;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 35px;
 }
 #pa_then-list{
-    background-color: darkred;
+    background-color: orange;
 }
 #pa_navbar{
     overflow: hidden;
