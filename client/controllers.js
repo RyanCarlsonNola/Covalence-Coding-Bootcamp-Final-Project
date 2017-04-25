@@ -128,7 +128,7 @@ angular.module('CODEocalypse.controllers', [])
         }
 
         $(document).ready(function () {
-
+            
         });
     }])
 
@@ -193,7 +193,21 @@ angular.module('CODEocalypse.controllers', [])
         }
 
         $(document).ready(function () {
-
+            var options = [
+                {selector: '#staggered-test', offset: 50, callback: function(el) {
+                    Materialize.toast("This is our ScrollFire Demo!", 1500 );
+                } },
+                {selector: '#staggered-test', offset: 205, callback: function(el) {
+                    Materialize.toast("Please continue scrolling!", 1500 );
+                } },
+                {selector: '#staggered-test', offset: 400, callback: function(el) {
+                    Materialize.showStaggeredList($(el));
+                } },
+                {selector: '#image-test', offset: 500, callback: function(el) {
+                    Materialize.fadeInImage($(el));
+                } }
+            ];
+            Materialize.scrollFire(options);
         });
 
     }])
@@ -226,7 +240,7 @@ angular.module('CODEocalypse.controllers', [])
         }
 
         $(document).ready(function () {
-
+            console.log(window.location);
         });
 
     }])
@@ -234,6 +248,20 @@ angular.module('CODEocalypse.controllers', [])
     .controller('JimWelController', ['$scope', '$location', 'UserService', 'User', '$routeParams', function ($scope, $location, UserService, User, $routeParams) {
         UserService.requireLogin();
         $scope.users = User.query();
+
+        $scope.updateUser = function (id) {
+            User.get({ id: id }, function (success) {
+                success.password = $('.ji_password').val();
+                success.$update(function () {
+                    $scope.users = User.query();
+                })
+                
+                Materialize.toast('password successfully changed', 2000)
+                setTimeout(function(){
+                    location.reload();
+                }, 2000); 
+            });
+        }
 
         $scope.logOutUser = function () {
             UserService.logout()
