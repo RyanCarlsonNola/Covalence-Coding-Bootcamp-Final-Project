@@ -85,7 +85,7 @@ angular.module('CODEocalypse.controllers', [])
             $('#ry_RyanDiv').click(function () {
                 $('#ja_mainWelcome').css('background-image', 'none');
                 $('#ji_mainWelcome').css('background-image', 'none');
-                $('#ry_mainWelcome').css('background-image', 'none');
+                $('#ry_mainWelcome').css('background-image', 'url(images/londontowerbridge.jpg)');
                 $('#pa_mainWelcome').css('background-image', 'none');
                 $("#passwordBox").show();
                 $("#passwordRemove").show();
