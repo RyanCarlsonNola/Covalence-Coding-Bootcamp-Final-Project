@@ -128,7 +128,7 @@ angular.module('CODEocalypse.controllers', [])
         }
 
         $(document).ready(function () {
-            
+
         });
     }])
 

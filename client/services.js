@@ -15,7 +15,7 @@ app.service('UserService', ['$http', '$location', function($http, $location) {
     this.requireLogin = function() {
         if(!this.isLoggedIn()) {
             var current = $location.path();
-            $location.path(current).search('p', current);
+            $location.path('/').search('p', current);
         }
     }
 
