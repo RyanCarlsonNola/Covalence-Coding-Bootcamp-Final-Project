@@ -102,7 +102,6 @@ ja_mainWelcome {
   height: 300px;
   background-color: #88BB00;
   font-family: 'Droid Serif', serif;
-  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
 }
 
 #ja_divtext{
@@ -222,7 +221,6 @@ ry_mainWelcome {
   height: 300px;
   background-color: #88BB00;
   font-family: 'Droid Serif', serif;
-  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
 }
 
 #ry_divtext{
@@ -280,7 +278,6 @@ pa_mainWelcome {
   height: 300px;
   background-color: #88BB00;
   font-family: 'Droid Serif', serif;
-  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
 }
 
 #pa_divtext{
@@ -349,7 +346,6 @@ ji_mainWelcome {
   height: 300px;
   background-color: #88BB00;
   font-family: 'Droid Serif', serif;
-  /*animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;*/
 }
 
 #ji_divtext{
