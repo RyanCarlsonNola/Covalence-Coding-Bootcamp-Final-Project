@@ -125,15 +125,82 @@ ja_mainWelcome {
   left: 210px;
 }
 
-#ja_profilePic {
+/*#ja_profilePic {
   position: absolute;
   right: 45%;
   z-index: 2;
-}
+}*/
 
-#ja_headingBanner {
+/*#ja_headingBanner {
   position: relative;
   opacity: 0.2;
+}*/
+
+.ja_container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section.ja_module:last-child {
+  margin-bottom: 0;
+}
+section.ja_module h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+section.ja_module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.ja_module p:last-child {
+  margin-bottom: 0;
+}
+section.ja_module.ja_content {
+  padding: 40px 0;
+}
+section.ja_module.ja_parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.ja_module.ja_parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.ja_module.parallax-1 {
+  background-image: url("./images/ja_headerBackground.jpg");
+}
+section.ja_module.parallax-2 {
+  background-image: url("./images/ja_background5.jpg");
+}
+section.ja_module.parallax-3 {
+  background-image: url("./images/ja_background4.jpg");
+}
+
+@media all and (min-width: 600px) {
+  section.ja_module h2 {
+    font-size: 42px;
+  }
+  section.ja_module p {
+    font-size: 20px;
+  }
+  section.ja_module.ja_parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.ja_module.ja_parallax h1 {
+    font-size: 160px;
+  }
 }
 
 /*End James*/
