@@ -13,6 +13,11 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         controller: 'JimWelController',
         css: 'views/Jim/jim_styles.css'
     })
+    $routeProvider.when('/jim/auto', {
+        templateUrl: 'views/Jim/jim_auto.html',
+        controller: 'JimAutoController',
+        css: 'views/Jim/jim_styles.css'
+    })
     $routeProvider.when('/james', {
         templateUrl: 'views/James/james.html',
         controller: 'JamesWelController',
