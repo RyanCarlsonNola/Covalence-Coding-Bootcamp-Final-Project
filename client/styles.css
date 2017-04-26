@@ -200,7 +200,12 @@ section.ja_module.parallax-3 {
 /* James Software list */
 
 #ja_softwareList {
-  width: 33%;
+  width: 66%;
+}
+
+.ja_softwareVideo {
+  position: absolute;
+  right:0;
 }
 
 /* James About Me */
