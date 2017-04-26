@@ -323,8 +323,8 @@ ry_mainWelcome {
     
 }
 #ry_body {
-  background-image: url("./images/denver.jpg"), url("./images/denver2.jpg");
-  background-repeat: repeat-x, repeat;
+  background-image: url("./images/denver.jpg"), url("./images/denver2.jpg"), url("./images/black.jpg");
+  background-repeat: repeat, repeat, repeat;
   background-size: 100%;
 }
 #ry_transparency {
