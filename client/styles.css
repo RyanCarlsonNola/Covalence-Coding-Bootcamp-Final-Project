@@ -322,6 +322,9 @@ ry_mainWelcome {
   background-repeat: repeat-x, repeat;
   background-size: 100%;
 }
+#ry_transparency {
+  opacity: 0.9;
+}
 /*End Ryan*/
 
 /*Patrick*/
