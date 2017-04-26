@@ -309,12 +309,18 @@ ry_mainWelcome {
 .ry_btn-social:hover {
     transform: scale(1.75, 1.75); /** default is 1, scale it to 1.5 */
     opacity: 1;
+    z-index: 2;
 }
 .ry_picture-radius {
     display: block;
     margin: auto;
     border-radius: 50%;
     
+}
+#ry_body {
+  background-image: url("./images/denver.jpg"), url("./images/denver2.jpg");
+  background-repeat: repeat-x, repeat;
+  background-size: 100%;
 }
 /*End Ryan*/
 
