@@ -264,6 +264,18 @@ footer.page-footer {
   margin: 0;
 }
 
+/* James Education */
+
+#ja_collegeBox {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+}
+.ja_collegeVideo {
+  position: absolute;
+  right:10%;
+}
+
 /*End James*/
 
 /*Ryan*/
