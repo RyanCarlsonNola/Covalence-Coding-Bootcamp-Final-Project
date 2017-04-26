@@ -240,7 +240,8 @@ angular.module('CODEocalypse.controllers', [])
         }
 
         $(document).ready(function () {
-            console.log(window.location);
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
         });
 
     }])

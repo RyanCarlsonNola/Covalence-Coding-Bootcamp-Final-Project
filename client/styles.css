@@ -6,9 +6,9 @@ html,body {
   min-height:100%;
  }
 
- div{
+ /*div{
    border: 1px solid darkorange;
- }
+ }*/
 
 .quarter{
   border: 1px solid white;
@@ -125,12 +125,6 @@ ja_mainWelcome {
   left: 210px;
 }
 
-/*#ja_profilePic {
-  position: absolute;
-  right: 45%;
-  z-index: 2;
-}*/
-
 /*#ja_headingBanner {
   position: relative;
   opacity: 0.2;
@@ -207,6 +201,62 @@ section.ja_module.parallax-3 {
 
 #ja_softwareList {
   width: 33%;
+}
+
+/* James About Me */
+
+/*#ja_profilePic {
+  position: relative;
+  z-index: 2;
+}
+
+#ja_aboutSection {
+  position: absolute;
+}*/
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
 }
 
 /*End James*/
