@@ -311,6 +311,20 @@ angular.module('CODEocalypse.controllers', [])
         UserService.requireLogin();
         $scope.users = User.query();
 
+        $scope.updateUser = function (id) {
+            User.get({ id: id }, function (success) {
+                success.password = $('.ry_password').val();
+                success.$update(function () {
+                    $scope.users = User.query();
+                })
+                
+                Materialize.toast('password successfully changed', 2000)
+                setTimeout(function(){
+                    location.reload();
+                }, 2000); 
+            });
+        }
+
         $scope.logOutUser = function () {
             UserService.logout()
                 .then(function () {
