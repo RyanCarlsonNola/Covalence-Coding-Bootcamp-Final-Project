@@ -9,15 +9,28 @@
 
     <!--Got off bootstrap official site-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
+
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Ryan Carlson</a>
             </div>
             <ul class="nav navbar-nav">
-                <!--<li class="active"><a href="#">Home</a></li>-->
                 <li><a href="#About">Portfolio</a></li>
                 <li><a href="#Photography">Photography</a></li>
                 <li><a href="#Contact">Contact</a></li>
+            </ul>
+            
+            <ul class="nav navbar-nav">
+
+                <div class="input-field">
+                <input  id="input_text" class="ry_password" type="password" data-length="10"
+                    ng-model="password">
+                <label for="input_text">New Password</label>
+                </div>
+            </ul>
+            
+            <ul class="nav navbar-nav">
+            <li><a style="padding-top: 20px" ng-click="updateUser(2)">Submit</a></li>
                 <button style="color:grey" ng-click="logOutUser()">Logout</button>
             </ul>
         </div>
@@ -121,11 +134,20 @@
                     <address>
                         <strong><p style="text-align: center">Feel free to email me by clicking the link below!</p></strong>
                         <!--<strong><p style="text-align: center">Ryan Carlson</p></strong><br>-->
-                        <a href="mailto:rjclight@gmail.com"><p style="text-align: center">rjclight@gmail.com</a></p>
+                        <a href="mailto:rjclight@gmail.com">
+                            <p style="text-align: center">rjclight@gmail.com</a>
+                        </p>
                     </address>
                 </div>
 
 
             </div>
         </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">Written and coded by Ryan Carlson</a>
+            </div>
+          </div>
         <!--<button ng-click="logOutUser()">Logout</button>-->

@@ -14,6 +14,7 @@ angular.module('CODEocalypse.controllers', [])
             UserService.login($scope.email, $scope.password).then(function () {
                 $location.path('/' + $scope.email);
             }, function (err) {
+                alert("You typed the wrong password, please try again...");
                 console.log(err);
             })
         }
@@ -68,7 +69,7 @@ angular.module('CODEocalypse.controllers', [])
                 $('#ja_mainWelcome').css('background-image', 'none');
                 $('#ji_mainWelcome').css('background-image', 'none');
                 $('#ry_mainWelcome').css('background-image', 'none');
-                $('#pa_mainWelcome').css('background-image', 'url(images/patrojo.jpg)');
+                $('#pa_mainWelcome').css('background-image', 'url(images/patrojo.jpg)').css('background-size', '100%');
                 $("#passwordBox").show();
                 $("#passwordRemove").show();
                 $('.userLogin').val('patrick');
@@ -302,6 +303,20 @@ angular.module('CODEocalypse.controllers', [])
     .controller('RyanWelController', ['$scope', '$location', 'UserService', 'User', '$routeParams', function ($scope, $location, UserService, User, $routeParams) {
         UserService.requireLogin();
         $scope.users = User.query();
+
+        $scope.updateUser = function (id) {
+            User.get({ id: id }, function (success) {
+                success.password = $('.ry_password').val();
+                success.$update(function () {
+                    $scope.users = User.query();
+                })
+                
+                Materialize.toast('password successfully changed', 2000)
+                setTimeout(function(){
+                    location.reload();
+                }, 2000); 
+            });
+        }
 
         $scope.logOutUser = function () {
             UserService.logout()
