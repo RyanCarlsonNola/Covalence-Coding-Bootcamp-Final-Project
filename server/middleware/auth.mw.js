@@ -3,7 +3,6 @@ exports.isLoggedIn = function(req, res, next) {
         next();
     } else {
         res.sendStatus(401);
-        // next(new Error('Not Authorized'))
     }
 }
 
