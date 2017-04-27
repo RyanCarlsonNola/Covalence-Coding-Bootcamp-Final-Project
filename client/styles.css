@@ -342,6 +342,10 @@ ry_mainWelcome {
 #ry_transparency {
   opacity: 0.9;
 }
+
+.ry_social {
+  padding-right: 37px;
+}
 /*End Ryan*/
 
 /*Patrick*/
