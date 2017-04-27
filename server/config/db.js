@@ -2,10 +2,11 @@ var mysql = require("mysql");
 
 var pool = mysql.createPool({
     connectionLimit: 10,
-    host: "covinstance.cifwyidf5tpm.us-east-1.rds.amazonaws.com",
-    user: process.env.DB_U,
-    password: process.env.DB_PASS,
-    database: "CovalenceStore"
+    // host: "covinstance.cifwyidf5tpm.us-east-1.rds.amazonaws.com",
+    host: process.env.RDS_HOSTNAME,
+    user: process.env.RDS_USER,
+    password: process.env.RDS_PASSWORD,
+    database: process.env.RDS_DATABASE,
 })
 
 exports.pool = pool;
