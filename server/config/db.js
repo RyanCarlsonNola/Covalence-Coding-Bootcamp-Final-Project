@@ -10,21 +10,18 @@ var pool = mysql.createPool({
 
 exports.pool = pool;
 
-//CALL A MYSQL QUERY THAT HAS NO RETURN VALUES
 exports.empty = function (procedure, values) {
     return sendQuery(procedure, values).then(function () {
         return;
     })
 };
 
-//CALL A MYSQL QUERY THAT RETURNS A SINGLE ROW
 exports.row = function(procedure, values) {
     return sendQuery(procedure, values).then(function (resultSets) {
         return resultSets[0][0];
     })
 };
 
-//CALL A MYSQL QUERY THAT RETURNS MULTIPLE ROWS
 exports.rows = function(procedure, values) {
     return sendQuery(procedure, values).then(function (resultSets) {
         return resultSets[0];
@@ -51,7 +48,6 @@ function sendQuery(procedure, values){
     })
 }
 
-//CALL SomeProcedure -- > (?, ?, ?, ?) - If there's 4 parameters
 function parseParams(amount){
     var output = "";
     for (var i = 1; i <= amount; i++) {

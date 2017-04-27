@@ -125,11 +125,6 @@ ja_mainWelcome {
   left: 210px;
 }
 
-/*#ja_headingBanner {
-  position: relative;
-  opacity: 0.2;
-}*/
-
 .ja_container {
   max-width: 960px;
   margin: 0 auto;
@@ -209,15 +204,6 @@ section.ja_module.parallax-3 {
 }
 
 /* James About Me */
-
-/*#ja_profilePic {
-  position: relative;
-  z-index: 2;
-}
-
-#ja_aboutSection {
-  position: absolute;
-}*/
 
 p {
   line-height: 2rem;
