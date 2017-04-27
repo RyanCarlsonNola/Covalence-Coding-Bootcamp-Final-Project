@@ -42,19 +42,18 @@ function configurePassport(app) {
             done(err);
         })
     })
-    //CONFIGURE OUR DATABASE TO CREATE A 'SESSIONS' TABLE
-    //AND START STORING USER SESSIONS THERE
+
     var sessionStore = new MySQLStore({
         createDatabaseTable: true
     }, pool);
-    //CONFIGURE OUR SESSIONS TO HAVE THESE PROPERTIES
+
     app.use(session({
         secret: 'randomly-generated string!',
         store: sessionStore, 
         resave: false,
         saveUninitialized: false
     }))
-    //START UP PASSPORT AND BIND EXPRESS SESSIONS THROUGH IT
+
     app.use(passport.initialize());
     app.use(passport.session());
 }

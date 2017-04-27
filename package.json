@@ -4,6 +4,7 @@
   "description": "The four horseman's resume site",
   "main": "server/index.js",
   "scripts": {
+    "run": "node server/index.js",
     "test": "source .variables && nodemon"
   },
   "repository": {

@@ -6,9 +6,9 @@ html,body {
   min-height:100%;
  }
 
- div{
+ /*div{
    border: 1px solid darkorange;
- }
+ }*/
 
 .quarter{
   border: 1px solid white;
@@ -125,17 +125,6 @@ ja_mainWelcome {
   left: 210px;
 }
 
-/*#ja_profilePic {
-  position: absolute;
-  right: 45%;
-  z-index: 2;
-}*/
-
-/*#ja_headingBanner {
-  position: relative;
-  opacity: 0.2;
-}*/
-
 .ja_container {
   max-width: 960px;
   margin: 0 auto;
@@ -206,7 +195,71 @@ section.ja_module.parallax-3 {
 /* James Software list */
 
 #ja_softwareList {
-  width: 33%;
+  width: 66%;
+}
+
+.ja_softwareVideo {
+  position: absolute;
+  right:0;
+}
+
+/* James About Me */
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/* James Education */
+
+#ja_collegeBox {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+}
+.ja_collegeVideo {
+  position: absolute;
+  right:10%;
 }
 
 /*End James*/
@@ -259,12 +312,25 @@ ry_mainWelcome {
 .ry_btn-social:hover {
     transform: scale(1.75, 1.75); /** default is 1, scale it to 1.5 */
     opacity: 1;
+    z-index: 2;
 }
 .ry_picture-radius {
     display: block;
     margin: auto;
     border-radius: 50%;
     
+}
+#ry_body {
+  background-image: url("./images/denver.jpg"), url("./images/denver2.jpg"), url("./images/black.jpg");
+  background-repeat: repeat, repeat, repeat;
+  background-size: 100%;
+}
+#ry_transparency {
+  opacity: 0.9;
+}
+
+.ry_social {
+  padding-right: 37px;
 }
 /*End Ryan*/
 

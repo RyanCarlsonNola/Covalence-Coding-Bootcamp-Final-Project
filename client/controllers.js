@@ -26,31 +26,23 @@ angular.module('CODEocalypse.controllers', [])
 
             $('#ja_JamesDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                // $('#ja_mainWelcome').css('background-image', 'url(images/heaven.jpg)');
             }).mouseout(function () {
                 $(this).css('animation', 'none');
-                // $('#ja_mainWelcome').css('background-image', 'none');
             });
             $('#ry_RyanDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                // $('#ry_mainWelcome').css('background-image', 'url()');
             }).mouseout(function () {
                 $(this).css('animation', 'none');
-                // $('#ry_mainWelcome').css('background-image', 'none');
             });
             $('#ji_JimDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                // $('#ji_mainWelcome').css('background-image', 'url(images/theGreatWavesmall.jpg');
             }).mouseout(function () {
                 $(this).css('animation', 'none');
-                // $('#ji_mainWelcome').css('background-image', 'none');
             });
             $('#pa_PatrickDiv').mouseover(function () {
                 $(this).css('animation', 'square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate');
-                // $('#pa_mainWelcome').css('background-image', 'url(images/patrojo.jpg)');
             }).mouseout(function () {
                 $(this).css('animation', 'none');
-                // $('#pa_mainWelcome').css('background-image', 'none');
             });
             $('#ja_JamesDiv').click(function () {
                 $('#ja_mainWelcome').css('background-image', 'url(images/heaven.jpg)');
@@ -240,7 +232,8 @@ angular.module('CODEocalypse.controllers', [])
         }
 
         $(document).ready(function () {
-            console.log(window.location);
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
         });
 
     }])
@@ -273,9 +266,56 @@ angular.module('CODEocalypse.controllers', [])
         }
     }])
 
+    .controller('JimAutoController', ['$scope', '$location', 'User', 'UserService', '$routeParams', function ($scope, $location, User, UserService, $routeParams) {
+        UserService.requireLogin();
+        $scope.users = User.query();
+
+        $scope.updateUser = function (id) {
+            User.get({ id: id }, function (success) {
+                success.password = $('.ji_password').val();
+                success.$update(function () {
+                    $scope.users = User.query();
+                })
+                
+                Materialize.toast('password successfully changed', 2000)
+                setTimeout(function(){
+                    location.reload();
+                }, 2000); 
+            });
+        }
+
+        $scope.logOutUser = function () {
+            UserService.logout()
+                .then(function () {
+                    $location.path('/');
+                }, function (err) {
+                    console.log(err)
+                })
+        }
+
+        $(document).ready(function () {
+
+        });
+
+    }])
+
     .controller('RyanWelController', ['$scope', '$location', 'UserService', 'User', '$routeParams', function ($scope, $location, UserService, User, $routeParams) {
         UserService.requireLogin();
         $scope.users = User.query();
+
+        $scope.updateUser = function (id) {
+            User.get({ id: id }, function (success) {
+                success.password = $('.ry_password').val();
+                success.$update(function () {
+                    $scope.users = User.query();
+                })
+                
+                Materialize.toast('password successfully changed', 2000)
+                setTimeout(function(){
+                    location.reload();
+                }, 2000); 
+            });
+        }
 
         $scope.logOutUser = function () {
             UserService.logout()
@@ -288,16 +328,6 @@ angular.module('CODEocalypse.controllers', [])
 
         $(document).ready(function () {
             $('.carousel').carousel();
-            // $(document).on({
-            //     mouseenter: function () {
-            //         $(this).css({ width: "100%", height: "100%" });
-            //     },
-
-            //     mouseleave: function () {
-            //         $(this).css({ width: "auto", height: "auto" });
-            //     }
-            // }, '#test');
-
         });
     }])
 
