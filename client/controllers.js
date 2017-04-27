@@ -14,6 +14,7 @@ angular.module('CODEocalypse.controllers', [])
             UserService.login($scope.email, $scope.password).then(function () {
                 $location.path('/' + $scope.email);
             }, function (err) {
+                alert("You typed the wrong password, please try again...");
                 console.log(err);
             })
         }
