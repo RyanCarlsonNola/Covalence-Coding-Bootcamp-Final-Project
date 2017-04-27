@@ -68,7 +68,7 @@ angular.module('CODEocalypse.controllers', [])
                 $('#ja_mainWelcome').css('background-image', 'none');
                 $('#ji_mainWelcome').css('background-image', 'none');
                 $('#ry_mainWelcome').css('background-image', 'none');
-                $('#pa_mainWelcome').css('background-image', 'url(images/patrojo.jpg)');
+                $('#pa_mainWelcome').css('background-image', 'url(images/patrojo.jpg)').css('background-size', '100%');
                 $("#passwordBox").show();
                 $("#passwordRemove").show();
                 $('.userLogin').val('patrick');
