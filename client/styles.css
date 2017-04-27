@@ -463,6 +463,17 @@ ji_mainWelcome {
     height: 85%;
     width: 85%;
 }
+.jibox {
+    font-size: 150%;
+    font-weight: bold;
+    max-height: 600px;
+    min-height: 250px;
+    max-width: 1500px;
+    min-width: 200px;
+    position: fixed;
+    overflow: scroll;
+    background-color: lightgreen;
+}
 
 .ji_shoe {
     position: absolute;
