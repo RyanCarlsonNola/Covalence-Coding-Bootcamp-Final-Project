@@ -103,11 +103,11 @@ angular.module('CODEocalypse.controllers', [])
                 success.$update(function () {
                     $scope.users = User.query();
                 })
-                
+
                 Materialize.toast('password successfully changed', 2000)
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
-                }, 2000); 
+                }, 2000);
             });
         }
 
@@ -135,11 +135,11 @@ angular.module('CODEocalypse.controllers', [])
                 success.$update(function () {
                     $scope.users = User.query();
                 })
-                
+
                 Materialize.toast('password successfully changed', 2000)
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
-                }, 2000); 
+                }, 2000);
             });
         }
 
@@ -168,11 +168,11 @@ angular.module('CODEocalypse.controllers', [])
                 success.$update(function () {
                     $scope.users = User.query();
                 })
-                
+
                 Materialize.toast('password successfully changed', 2000)
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
-                }, 2000); 
+                }, 2000);
             });
         }
 
@@ -187,18 +187,26 @@ angular.module('CODEocalypse.controllers', [])
 
         $(document).ready(function () {
             var options = [
-                {selector: '#staggered-test', offset: 50, callback: function(el) {
-                    
-                } },
-                {selector: '#staggered-test', offset: 205, callback: function(el) {
-                    
-                } },
-                {selector: '#staggered-test', offset: 400, callback: function(el) {
-                    Materialize.showStaggeredList($(el));
-                } },
-                {selector: '#image-test', offset: 500, callback: function(el) {
-                    Materialize.fadeInImage($(el));
-                } }
+                {
+                    selector: '#staggered-test', offset: 50, callback: function (el) {
+
+                    }
+                },
+                {
+                    selector: '#staggered-test', offset: 205, callback: function (el) {
+
+                    }
+                },
+                {
+                    selector: '#staggered-test', offset: 400, callback: function (el) {
+                        Materialize.showStaggeredList($(el));
+                    }
+                },
+                {
+                    selector: '#image-test', offset: 500, callback: function (el) {
+                        Materialize.fadeInImage($(el));
+                    }
+                }
             ];
             Materialize.scrollFire(options);
         });
@@ -215,11 +223,11 @@ angular.module('CODEocalypse.controllers', [])
                 success.$update(function () {
                     $scope.users = User.query();
                 })
-                
+
                 Materialize.toast('password successfully changed', 2000)
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
-                }, 2000); 
+                }, 2000);
             });
         }
 
@@ -249,11 +257,11 @@ angular.module('CODEocalypse.controllers', [])
                 success.$update(function () {
                     $scope.users = User.query();
                 })
-                
+
                 Materialize.toast('password successfully changed', 2000)
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
-                }, 2000); 
+                }, 2000);
             });
         }
 
@@ -277,11 +285,11 @@ angular.module('CODEocalypse.controllers', [])
                 success.$update(function () {
                     $scope.users = User.query();
                 })
-                
+
                 Materialize.toast('password successfully changed', 2000)
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
-                }, 2000); 
+                }, 2000);
             });
         }
 
@@ -310,11 +318,11 @@ angular.module('CODEocalypse.controllers', [])
                 success.$update(function () {
                     $scope.users = User.query();
                 })
-                
+
                 Materialize.toast('password successfully changed', 2000)
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
-                }, 2000); 
+                }, 2000);
             });
         }
 
@@ -355,8 +363,15 @@ angular.module('CODEocalypse.controllers', [])
                 $("#pa_then-list").slideToggle();
             });
 
-            
-    $('.collapsible').collapsible();
-       
+    //         $(".button-collapse").sideNav({
+    //   menuWidth: 300, // Default is 240
+    //   edge: 'right', // Choose the horizontal origin
+    //   closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    // });
+            $('.collapsible').collapsible();
+            $("#pa_empty-div").mouseover(function(){
+        $("#pa_navbar").slideToggle(500);
+    });
+
         });
     }])
