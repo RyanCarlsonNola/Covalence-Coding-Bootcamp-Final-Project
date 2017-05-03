@@ -2,12 +2,14 @@
 <div id="pa_navbar" "pa_navbarcontent">
 <button type="submit" name="Logout!" ng-click="logOutUser()">Logout!</button>
 
-<input type="password" name="password" placeholder="password"><br>
+<input type="password" name="password" placeholder="New Password"><br>
 <input type="submit" value="Change!" onclick="updatePassword()">
 </div>
 
 <!--<span class="glyphicons glyphicons-show-lines">Password Config</span>-->
-<div id="pa_now-btn"><button type="button">NOW</button></div>
+<!--<audio id="bflat"><source src="./client/sounds/sonarnotehi.mp3" type="audio/mpeg"></audio>-->
+
+<div id="pa_now-btn"><button onclick="playSound()" type="button">NOW</button></div>
 <div id="pa_now-list">
     <p>
 At Covalence, I learned the fundamentals of 

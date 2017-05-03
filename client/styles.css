@@ -375,6 +375,7 @@ pa_mainWelcome {
     border: 5px, bold, purple;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 35px;
+    border-radius: 2em;
 }
 #pa_now-pic{
   width: 100%;
@@ -396,6 +397,7 @@ pa_mainWelcome {
     border: 5px, bold, purple;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 35px;
+    border-radius: 2em;
 }
 #pa_then-list{
     background-color: orange;
@@ -424,6 +426,7 @@ pa_mainWelcome {
   color: white;
   font-size: 5em;
   text-align: center;
+  border-radius: 1em
 }
 /*End Patrick*/
 

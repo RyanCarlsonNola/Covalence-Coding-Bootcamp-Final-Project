@@ -363,11 +363,6 @@ angular.module('CODEocalypse.controllers', [])
                 $("#pa_then-list").slideToggle();
             });
 
-    //         $(".button-collapse").sideNav({
-    //   menuWidth: 300, // Default is 240
-    //   edge: 'right', // Choose the horizontal origin
-    //   closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    // });
             $('.collapsible').collapsible();
             $("#pa_empty-div").mouseover(function(){
         $("#pa_navbar").slideToggle(500);
