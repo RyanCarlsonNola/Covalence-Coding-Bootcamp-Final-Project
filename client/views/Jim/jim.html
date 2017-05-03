@@ -1,47 +1,198 @@
-<div class=jiboxbig>
-    <div class=jiboxsmall>
-<h2 class=jih2test> Welcome to Jim de Lathouder's About Page </h2>
-<h3>Career Objectives</h3>
-      <p>I am seeking career opportunities with a primary focus on 
-          Full Stack Develoment, Project Management, and Database Design/Administration. 
-          I am specifically interested in bringing my technical and analytic skills to the financial, 
-          health care, or automotive industries.</p>
-<h3>Current Work Experience</h3>
-    <p>Business Professional with more than 15 years of experience in loss prevention in the banking 
-        industry with a focus on bankruptcy law and creditor rights. Now transitioning in to development.
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<div class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="/images/ji_menu.jpg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>HOBBIES and THINGS</p>
+  </a>
+  
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Jim de Lathouder.</h1>
+    <p>Full Stack Developer.</p>
+    <img src="/images/ji_background.jpg" alt="boy" class="w3-image" width="992" height="1108">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Objectives</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Put people first – Have respect for every person. Listen. Care. Serve others before yourself. Be inclusive. 
+        Balance work in a full life. Lead humanely. Set the good example. And remember to say thank you.
     </p>
-    <ul>
-        <li>Currently Programer Analyst I for Regions Bank</li>
-        <li>8 years Bankruptcy Specialist for Regions Bank</li>
-        <li>2 years Business Leasing Account Manager for Wells Fargo Financial</li>
-        <li>6 years Bankruptcy Specialist for Wells Fargo </li>
-    </ul>
-<h3>Specialties</h3>
-    <ul>
-        <li>Full Stack Develoment</li>
-        <li>Project Management</li>
-        <li>Loss Prevention</li>
-        <li>Bankruptcy</li>
-    </ul>
-<h3>Education</h3>
-<h4>University of Alabama at Birmingham</h4>
-    <p>Bachelor of Science (BS), Management Information Systems<br>
-    2009 – 2014</p>
-<h4>Des Moines Area Community College</h4>
-    <p>Associate of Arts (AA), Liberal Arts and Sciences/Liberal Studies<br>
-    2005 - 2007</p>
-</div>
-</div>
-<footer>
-    <div class="ji_shoe">
-        <ul>
-            <hr>
-            <input id="input_text" class="ji_password" type="password" data-length="10" ng-model="password">
-            <button ng-click="updateUser(4)">Change Passs word!</button>
-            <a href="/jim/auto" class="button">Hobbies</a>
-            <a href="/jim" class="button">Home again</a>
-            <button ng-click="logOutUser()" class="button">Log Outs!!</button>
-        
-        </ul>
+    <p>Do what is right – Always. Be honest. Do what you say. Use common sense. Stand for quality and integrity. 
+        Take the long view. Earn trust.
+    </p>
+    <p>Reach higher – Grow. One must grow, and we all must grow. Raise the bar. Be energetic. Be innovative. 
+        Achieve excellence. Improve continuously. Inspire and enable others. Succeed the right way
+    </p>
+    <p>Focus on your customer – Serving the customer in an exceptional way is our business, our only business. 
+        Know your customer. Serve your customer. Be committed. Understand needs. Meet needs. 
+        Make your customer’s life better by what you do.
+    </p>
+    <p>Enjoy life – Have fun. We are in the business of banking. But more importantly, we are in the business of life. 
+        Enjoy it. Laugh. Be creative. Celebrate.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">JDM Automotive Master</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
     </div>
-</footer>
+    <p class="w3-wide">Rice Cooking</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Nunchucks</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
+    
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">22+</span><br>
+        Automobiles Owned
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">6+</span><br>
+        Rice Cooker Options
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">1?</span><br>
+        Nunchuck
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">2 or 3 maybe?</span><br>
+        Friends (so lonely)
+      </div>
+    </div> 
+    </div>
+    
+    
+  </div>
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Honda Plans</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>This is my 2003 Honda S2000. I am in the process of restoring and upgrading for planned track use.</p>
+    
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="/images/ji_honda.jpg" style="width:100%">
+        
+      </div>
+
+      <div class="w3-half">
+        <img src="/images/ji_hondaF.jpg" style="width:100%">
+        
+      </div>
+    <!-- End photo grid -->
+    </div>
+    <a href="http://www.azquotes.com/quote/821275" title="Junior Johnson quote">
+    <img src="http://www.azquotes.com/picture-quotes/quote-the-best-way-to-make-a-small-fortune-in-racing-is-to-start-with-a-big-one-junior-johnson-82-12-75.jpg" 
+        alt="The best way to make a small fortune in racing is to start with a big one. - Junior Johnson"></a>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Photos  of Green Things</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>These are samples of green that I find interesting. 
+        My intentions are to find a color match for my living room accent wall.
+    </p>
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="/images/ji_greentree.jpg" style="width:100%">
+        <img src="/images/ji_greendrink2.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="/images/ji_hydrangea.jpg" style="width:100%">
+        <img src="/images/ji_waterfall.jpg" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Rice Cooker</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Back by popular demand! This is my Zojirushi Micron rice cooker. 
+        It has drastically improved my quality of life.  <a href="http://www.zojirushi.com/">Visit Zojirushi</a>
+    </p>
+    
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="/images/ji_rdorthy.jpg" style="width:100%">
+        <img src="/images/ji_foods.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="/images/ji_rdorthyO.jpg" style="width:100%">
+        <img src="/images/ji_moonKnight.jpg" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <hr>
+    <input id="input_text" class="ji_password" type="password" data-length="10" ng-model="password">
+    <button ng-click="updateUser(4)">Change Password</button>
+    <button ng-click="logOutUser()" class="button">Log Out</button>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+</div>
