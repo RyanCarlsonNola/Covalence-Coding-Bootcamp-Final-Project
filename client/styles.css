@@ -356,7 +356,7 @@ pa_mainWelcome {
 #pa_divtext{
   position: absolute;
   text-align: center;
-  text-shadow: 2px 2px lightgrey;
+  text-shadow: 2px 2px grey;
   right: 41%;
   top: 24%;
   color: floralwhite;
